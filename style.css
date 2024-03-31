@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Work Sans', sans-serif;
+	color: hsl(292, 42%, 14%);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	position: relative;
+	background-image: url(assets/images/background-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.container {
+	position: absolute;
+	top: 22.5%;
+	width: 90%;
+	max-width: 550px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 10px;
+	padding: 2.5rem;
+	box-shadow: 0 0 50px 0.1px rgba(0, 0, 0, 0.2);
+}
+
+#faqs {
+	display: flex;
+	align-items: center;
+}
+
+#faqs > span {
+	font-weight: 700;
+	font-size: 3rem;
+	padding-left: 1.3rem;
+}
+
+.question {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.question div {
+	font-size: 1rem;
+	font-weight: 600;
+	transition: color 0.2s;
+	flex-grow: 1;
+}
+
+.question:hover {
+	cursor: pointer;
+}
+
+.question:hover > div {
+	color: hsl(281, 80%, 60%);
+}
+
+.question > img {
+	display: block;
+	transition: all 0.5s;
+}
+
+.hide-icon {
+	height: 0;
+	width: 0;
+}
+
+.hide-answer {
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 0fr;
+}
+
+.spin-icon {
+	transform: rotate(360deg);
+}
+
+.answers {
+	transition: all 0.5s;
+}
+
+.answer {
+	color: hsl(292, 16%, 49%);
+	font-size: 1rem;
+	overflow: hidden;
+	grid-row: 1 / span 2;
+}
+
+.show-answer {
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 1fr;
+	padding-top: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 80%;
+		padding: 1.5rem; 
+	}
+
+	.question div {
+		font-size: 0.9rem;
+	}
+
+	#faqs > span {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		width: 90%;
+	}
+}
+
+.attribution {
+	font-size: 0.8rem;
+   font-weight: 600;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding: 10px 0; /* Adicione algum espaçamento interno para melhorar a aparência */
+}
+
+.attribution a {
+	color: hsl(0, 0%, 0%);
+}
