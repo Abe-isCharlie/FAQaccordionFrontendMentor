@@ -127,7 +127,6 @@ main {
    font-weight: 600;
 	text-align: center;
 	width: 100%;
-	position: fixed;
 	bottom: 0;
 	padding: 10px 0; /* Adicione algum espaçamento interno para melhorar a aparência */
 }
